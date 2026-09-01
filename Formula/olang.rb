@@ -1,26 +1,34 @@
-# Generated from dist/homebrew/olang.rb.tmpl in ooyeku/olang for
-# v0.79.0. Future releases are pushed here by the release workflow.
+# Homebrew formula template for olang. The canonical copy lives in the
+# olang repo; the release workflow's `homebrew` job substitutes the
+# 0.80.0 and @SHA_*@ placeholders from the fresh SHA256SUMS and
+# pushes the result to Formula/olang.rb in the ooyeku/homebrew-olang
+# tap. Edit this file — never the tap copy — and the next release
+# propagates it.
 class Olang < Formula
   desc "Dynamically typed functional language with a tiered interpreter/VM/JIT runtime"
   homepage "https://github.com/ooyeku/olang"
   license "MIT"
-  version "0.79.0"
+  version "0.80.0"
 
   on_macos do
     on_arm do
       url "https://github.com/ooyeku/olang/releases/download/v#{version}/olang-#{version}-macos-arm64.tar.gz"
-      sha256 "6ca188318252fbd46f557418c0818da2d223d68a83b659151468f9b67b5ec29e"
+      sha256 "d8cc0cd01fd5c1613dcb259b7d0cb87971a3279ee13d1a63de99e241ce1c5d4a"
     end
     on_intel do
       url "https://github.com/ooyeku/olang/releases/download/v#{version}/olang-#{version}-macos-x64.tar.gz"
-      sha256 "cb8685eafc3ee079a3c23f5e6a359b574289c830e15f7f0e18b3749f995dc276"
+      sha256 "80b20f8f2e66e3cbe2819e99ff9f4935e8222f8259d4ee4d3082a756194cbf5f"
     end
   end
 
   on_linux do
+    on_arm do
+      url "https://github.com/ooyeku/olang/releases/download/v#{version}/olang-#{version}-linux-arm64.tar.gz"
+      sha256 "e19ddbddb81773b344c6418211b46e29e2304b946af0bbaa45a3628f67a6ac28"
+    end
     on_intel do
       url "https://github.com/ooyeku/olang/releases/download/v#{version}/olang-#{version}-linux-x64.tar.gz"
-      sha256 "ee894cf42a0088c4d606ac8afaba2056cdc7a31afdbf95fab242f0219a524f8f"
+      sha256 "20b39abc4b7be3d6e53d43868dd02176f96622b099d721ca16caf2396bfe1d48"
     end
   end
 
