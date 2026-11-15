@@ -7,27 +7,27 @@ class Olang < Formula
   desc "Dynamically typed functional language with a tiered interpreter/VM/JIT runtime"
   homepage "https://github.com/ooyeku/olang"
   license "MIT"
-  version "1.0.0-rc.9"
+  version "1.0.0"
 
   on_macos do
     on_arm do
       url "https://github.com/ooyeku/olang/releases/download/v#{version}/olang-#{version}-macos-arm64.tar.gz"
-      sha256 "0d6375c91f2b2f94adfb6a631e73fb0a862b2feb09692faebca70289c3852a4f"
+      sha256 "db25100bf110283e8bc1d562af7d5d6662cd9616b984a04620b3ffb4a742a119"
     end
     on_intel do
       url "https://github.com/ooyeku/olang/releases/download/v#{version}/olang-#{version}-macos-x64.tar.gz"
-      sha256 "64111a9b9cdcd6daa555d723e3e67e8984f8928b27608f3eb5a73d2954f3842d"
+      sha256 "22f954f5d5400eb608e03ac82317ee17b35770373c26d903e4ce9e562170360a"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/ooyeku/olang/releases/download/v#{version}/olang-#{version}-linux-arm64.tar.gz"
-      sha256 "d93a3fa6c541fc102604c1bbe42aa66b1dd8ea6dc851064181c679da72971802"
+      sha256 "289024f3ff5fa137e9eddb7b15e04ba8b5ddd788214be57bffb5d3995def2f1c"
     end
     on_intel do
       url "https://github.com/ooyeku/olang/releases/download/v#{version}/olang-#{version}-linux-x64.tar.gz"
-      sha256 "4dfd2e010573a7aec98a82f4dfb0113bcf8523045e373bff65018c3ea89b7625"
+      sha256 "11be7bc3cb8d735e1886fbc1edfc655ac7b11320cf3e49c22f6f7da157058ff4"
     end
   end
 
